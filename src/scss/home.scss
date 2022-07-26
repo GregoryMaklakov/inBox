@@ -1,0 +1,310 @@
+
+.page {
+
+    &__main {
+    }
+    &__tabs {
+    }
+}
+
+//===================================      MAIN BLOCK     =============================================
+
+
+.main-blok {
+}
+
+.main-block {
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+        margin-top: rem(209);
+        @include adaptiveValue("gap", 66, 30);
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: em(1055)){
+              display: flex;
+              flex-direction: column;
+              padding-left: rem(15);
+              padding-right: rem(15);
+        }
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
+    }
+    &__content {
+        flex: 0 0 math.div(412, 1160) * 100%;
+    }
+
+    &__subcontent {
+    }
+
+    &__task {
+
+    }
+}
+.content-main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    @media (max-width:$mobile){
+         align-items: center; 
+         width: 100%;
+    }
+    &__title {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 60, 40);
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: #1D2736;
+        span {
+            color: #F0998D;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 180%;
+        color: #677487;
+    }
+    &__form {
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+
+    &__input {
+        width: 100%;
+        height: 60px;
+        background: #FFFFFF;
+        border: 1px solid #DFE8FA;
+        border-radius: 15px;
+        padding-left: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: #677487;
+        @media (max-width: em(500)){
+              width: 290px;
+        }
+    }
+    &__button {
+    }
+    &__wrp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: rem(30);
+    }
+    &__beta {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 146%;
+        color: #BBC0C7;
+    }
+}
+.button {
+}
+.subcontent {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    &__stars {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: rem(22);
+        @media (max-width:$mobile){
+             flex-wrap: wrap;
+             align-items: center;
+             justify-content: center; 
+        }
+    }
+    &__text {
+        font-weight: 700;
+        font-size: rem(15);
+        line-height: 146%;
+        color: #BBC0C7;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        gap: rem(38);
+        @media (max-width:$mobile){
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; 
+       }
+    }
+    &__item {
+    }
+}
+
+.task-blosk {
+    position: relative;
+    @media (max-width:$mobile){
+         display: none;
+    }
+    &__circle {
+        position: absolute;
+        z-index: 2;
+
+    }
+
+    &__circle-1 {
+        left: 229px;
+        top: -30px;
+        img {
+            width: 435px;
+            height: 435px;
+            object-fit: cover;
+        }
+    }
+    &__circle-2 {
+        left: 0px;
+        top: 318px;
+       img {
+        width: 382px;
+        height: 382px;
+       }
+    }
+
+    &__image {
+        width: 626px;
+        height: 559.9px;
+        z-index: 3;
+        position: relative;
+        @media (max-width:$mobile){
+            
+        }
+    }
+}
+
+.-ibg {
+}
+
+//========================================     MAIN BLOCK     end   ============================================================
+
+//========================================     TABS   ============================================================
+
+.tabs-block {
+    &__container-big {
+        background: #FDF9F8;
+    }
+}
+.tabs {
+    margin-top: rem(220);
+    &__navigation {
+        padding-top: rem(100);
+        display: flex;
+        flex-direction: row;
+        gap: rem(48);
+    }
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: 180%;
+        color: #1D2736;
+        transition: all .5s;
+        border:2px solid #F0998D;
+        display:inline-block;
+        text-align:center;
+        padding:5px;
+        &:hover{
+            animation:border-bottom-animate 1s forwards;
+        }
+        &._tab-active {
+            border-bottom: 3px solid #F0998D;
+        }
+    }
+    &__content {
+        margin-top: rem(64);
+    }
+    &__body {
+    }
+}
+
+.body-tab {
+    &__content {
+        flex: 0 0 math.div(368, 1160) * 100%;
+    }
+    &__wrp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: #1D2736;
+        span {
+            color: #F0998D;
+        }
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: #677487;
+        padding-top: rem(24);
+    }
+
+    &__replaces {
+        font-size: 14px;
+        line-height: 180%;
+        letter-spacing: 0.2em;
+        color: #677487;
+        padding-top: rem(32);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        padding-top: rem(10);
+    }
+
+    &__item {
+        }
+    
+    &__link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 180%;
+        color: #1D2736;
+        transition: all .5s;
+        @media (any-hover: hover){
+            &:hover{
+                color: #F0998D;
+            }
+        }
+    }
+    &__btn {
+        margin-top: rem(40);
+    }
+
+    &__image {
+        width: 586px;
+        height: 475px;
+        &-second {
+            width: 400px;
+        }
+    }
+}
+.button {
+}
+.-ibg {
+}
+//========================================     TABS    end   ============================================================

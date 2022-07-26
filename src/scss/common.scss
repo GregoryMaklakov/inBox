@@ -1,0 +1,20 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.button {
+    width: 144.64px;
+    height: 59px;
+    background: #F0998D;
+    box-shadow: 0px 16px 40px rgba(255, 188, 166, 0.33);
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 27px;
+    color: #FFFFFF;
+    transition: all .5s;
+    @media (any-hover: hover){
+        &:hover{
+            background-color: #fcb8a6;
+            color: #ffff;
+        }
+    }
+}
