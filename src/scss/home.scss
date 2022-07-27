@@ -1,21 +1,15 @@
 
 .page {
-
     &__main {
     }
     &__tabs {
     }
+    &__selling {
+    }
 }
-
 //===================================      MAIN BLOCK     =============================================
 
-
-.main-blok {
-}
-
 .main-block {
-    &__container {
-    }
 
     &__body {
         display: flex;
@@ -38,13 +32,6 @@
     &__content {
         flex: 0 0 math.div(412, 1160) * 100%;
     }
-
-    &__subcontent {
-    }
-
-    &__task {
-
-    }
 }
 .content-main {
     display: flex;
@@ -64,14 +51,11 @@
             color: #F0998D;
         }
     }
-
     &__subtitle {
         font-weight: 400;
         font-size: rem(18);
         line-height: 180%;
         color: #677487;
-    }
-    &__form {
     }
 }
 .form {
@@ -94,8 +78,7 @@
               width: 290px;
         }
     }
-    &__button {
-    }
+
     &__wrp {
         display: flex;
         flex-direction: row;
@@ -109,8 +92,7 @@
         color: #BBC0C7;
     }
 }
-.button {
-}
+
 .subcontent {
     display: flex;
     flex-direction: column;
@@ -144,8 +126,6 @@
             justify-content: center; 
        }
     }
-    &__item {
-    }
 }
 
 .task-blosk {
@@ -156,7 +136,6 @@
     &__circle {
         position: absolute;
         z-index: 2;
-
     }
 
     &__circle-1 {
@@ -176,19 +155,12 @@
         height: 382px;
        }
     }
-
     &__image {
         width: 626px;
         height: 559.9px;
         z-index: 3;
         position: relative;
-        @media (max-width:$mobile){
-            
-        }
     }
-}
-
-.-ibg {
 }
 
 //========================================     MAIN BLOCK     end   ============================================================
@@ -200,13 +172,28 @@
         background: #FDF9F8;
     }
 }
+//======================================== Animation navTab  
+$template-color:#F0998D;
+$tmpt-bg-clr:#FDF9F8;
+@keyframes border-bottom-animate{ 
+    @for $i from 0 through 100{
+      #{$i}%{
+        border-image:linear-gradient(to right, $template-color $i+0%, white $i + 0%) 0 0 1 0 ;
+      }
+    }
+  }
 .tabs {
     margin-top: rem(220);
     &__navigation {
         padding-top: rem(100);
         display: flex;
         flex-direction: row;
-        gap: rem(48);
+        @include adaptiveValue("gap", 48, 20);
+        @media (max-width:$mobile){
+             flex-wrap: wrap;
+             justify-content: center;
+             align-items: center; 
+        }
     }
     &__title {
         font-style: normal;
@@ -215,21 +202,19 @@
         line-height: 180%;
         color: #1D2736;
         transition: all .5s;
-        border:2px solid #F0998D;
-        display:inline-block;
-        text-align:center;
-        padding:5px;
+        border-bottom: 2px solid $tmpt-bg-clr;
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
         &:hover{
             animation:border-bottom-animate 1s forwards;
         }
         &._tab-active {
-            border-bottom: 3px solid #F0998D;
+            border-bottom: 2px solid #F0998D;
         }
     }
     &__content {
         margin-top: rem(64);
-    }
-    &__body {
     }
 }
 
@@ -242,6 +227,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:$mobile){
+             flex-wrap: wrap;
+             justify-content: center; 
+        }
     }
     &__title {
         font-weight: 700;
@@ -260,7 +249,6 @@
         color: #677487;
         padding-top: rem(24);
     }
-
     &__replaces {
         font-size: 14px;
         line-height: 180%;
@@ -268,17 +256,12 @@
         color: #677487;
         padding-top: rem(32);
     }
-
     &__list {
         display: flex;
         flex-direction: row;
         gap: 32px;
         padding-top: rem(10);
     }
-
-    &__item {
-        }
-    
     &__link {
         font-weight: 600;
         font-size: 18px;
@@ -294,7 +277,6 @@
     &__btn {
         margin-top: rem(40);
     }
-
     &__image {
         width: 586px;
         height: 475px;
@@ -303,8 +285,87 @@
         }
     }
 }
-.button {
-}
-.-ibg {
-}
+
 //========================================     TABS    end   ============================================================
+
+
+//========================================     Selling    ============================================================
+
+.selling-block {
+    &__container-big {
+        background: #F9F7FC;
+        margin-top: rem(92);
+        @include adaptiveValue("padding-top", 140, 90);
+        @include adaptiveValue("padding-bottom", 140, 90);
+    }
+}
+.selling-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width: em(1000)){
+          flex-wrap: wrap;
+          justify-content: center;
+    }
+    &__stop {
+        @media (max-width: em(1000)){
+              justify-content: center;
+              display: flex;
+              flex-direction: column;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 110%;
+            letter-spacing: -0.03em;
+            color: #1D2736;
+            span {
+                color:#F0998D;
+            }
+        }
+        h4 {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 180%;
+            color: #677487;
+            margin-top: rem(30);
+            padding-right: rem(10);
+        }
+    }
+    &__wrp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        flex: 0 0 math.div(494, 1240) * 100%;
+        @media (max-width: em(1000)){
+              flex: 1 1 auto;
+              padding-top: rem(60);
+              border-left: none;
+        }
+    }
+}
+.descr-selling {
+    @include adaptiveValue("padding-left", 62, 10);
+    @media (max-width:$mobile){
+         margin-left: none; 
+    }
+    &:not(:last-child) {
+        margin-bottom: rem(60);
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 180%;
+        color: #1D2736;
+        margin-top: rem(16);
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 180%;
+        color: #677487;
+        margin-top: rem(16);
+    }
+}
+//========================================     Selling    end   ============================================================
