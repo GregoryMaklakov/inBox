@@ -6,6 +6,8 @@
     }
     &__selling {
     }
+    &__price {
+    }
 }
 //===================================      MAIN BLOCK     =============================================
 
@@ -337,7 +339,7 @@ $tmpt-bg-clr:#FDF9F8;
         flex-direction: column;
         align-items: center;
         border-left: 1px solid rgba(0, 0, 0, 0.2);
-        flex: 0 0 math.div(494, 1240) * 100%;
+        flex: 0 0 math.div(494, 1160) * 100%;
         @media (max-width: em(1000)){
               flex: 1 1 auto;
               padding-top: rem(60);
@@ -369,3 +371,111 @@ $tmpt-bg-clr:#FDF9F8;
     }
 }
 //========================================     Selling    end   ============================================================
+
+
+//========================================     PRICE   ============================================================
+
+
+.price-block {
+    margin-top: rem(40);
+    //position: relative;
+    &__container-big {
+        background: #FFFBFA;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 618px;
+        height: 690px;
+        z-index: 1;
+    }
+
+    &__body {
+        padding-top: rem(92);
+        padding-bottom: rem(144);
+    }
+    &__price {
+        @include adaptiveValue("padding-left", 200, 50);
+        @include adaptiveValue("padding-right", 200, 50);
+    }
+
+    &__curr {
+        font-weight: 700;
+        font-size: 120px;
+        line-height: 80%;
+        letter-spacing: -0.03em;
+        color: #1D2736;
+        position: relative;
+        z-index: 5;
+        @media (max-width: em(880)){
+              margin-top: rem(60);
+        }
+    }
+    &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 180%;
+        color: #1D2736;
+        margin-top: rem(16);
+        position: relative;
+        z-index: 5;
+    }
+}
+
+.price-content {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 math.div(472, 11600) * 100%;
+    align-items: center;
+    position: relative;
+    @media (max-width: em(880)){
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+    }
+    @include adaptiveValue("padding-top", 220, 100);
+    &__wrp {
+        display: flex;
+        flex-direction: column;
+        gap: rem(48);
+        z-index: 3;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: #1D2736;
+        @media (max-width:$mobile){
+             text-align: center; 
+        }
+        span {
+            color: #F0998D;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 16px;
+        @media (max-width: em(600)){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+    }
+    &__item {
+    }
+
+    &__btn {
+        @media (max-width:$mobile){
+             display: block;
+             margin: 0 auto; 
+        }
+    }
+}
+.button {
+}
+//========================================     PRICE   END  ============================================================
