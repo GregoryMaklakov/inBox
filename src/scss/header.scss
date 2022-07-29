@@ -27,6 +27,10 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: em(1180)){
+			padding-left: 10px;
+			padding-right: 10px;
+	  }
 	}
 
 	&__logo {
@@ -105,14 +109,9 @@
 			 font-size: rem(24); 
 		}
 	}
+}
 
-	&__icon {
-	}
-}
-.icon-menu {
-}
 .actions-header {
-
 	&__btn {
 		width: 109px;
 		height: 50px;
@@ -125,6 +124,9 @@
 		color: #FD7461;
 		transition: all .5s;
 		box-shadow: none;
+		@media (max-width:$mobile){
+			 width: 200px; 
+		}
 		@media (any-hover: hover){
 			&:hover{
 				background-color: #fcb8a6;
@@ -132,8 +134,7 @@
 			}
 		}
 	}
-	&__language {
-	}
+
 }
 
 
