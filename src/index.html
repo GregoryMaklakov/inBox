@@ -297,7 +297,41 @@
 						</div>
 					</div>
 				</div>
+				<div class="beta-page__container">
+					<div class="beta-page__body">
+						<div class="beta-page__title">apply to our <span>closed beta.</span></div>
+						<div class="beta-page__form form-beta">
+							<form id="forma" class="form-beta__body" action="files/sendmail/sendmail.php" method="POST">
+
+								<div class="form-beta__column form-beta__column-1">
+									<div class="form-beta__input">
+										<label for="input-first">Name</label>
+										<input type="text" name="form[name]" data-error="Error" data-required placeholder="Let’s not be strangers" class="input input-first">
+									</div>
+									<div class="form-beta__input">
+										<label for="input-second">Website</label>
+										<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Put 	the URL right there" class="input input-second">
+									</div>
+								</div>
+								
+								<div class="form-beta__column form-beta__column-2">
+									<div class="form-beta__input">
+										<label for="input-third">Phone Number</label>
+										<input type="text" name="form[email]" data-error="Error" placeholder="470000000" class="input input-third">
+									</div>
+									<div class="form-beta__input">
+										<label for="input-forth">Email Address</label>
+										<input autocomplete="off" data-required data-validate type="email" name="form[]" data-error="Error" placeholder="That’s right, we need your email" class="input input-forth">
+									</div>
+								</div>		
+								<button type="submit" class="form-beta__button button">Send</button>							
+							</form>
+						</div>
+					</div>
+				</div>
 			</section>
+			
+				
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

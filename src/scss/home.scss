@@ -477,8 +477,7 @@ $tmpt-bg-clr:#FDF9F8;
         }
     }
 }
-.button {
-}
+
 //========================================     PRICE   END  ============================================================
 
 
@@ -486,32 +485,24 @@ $tmpt-bg-clr:#FDF9F8;
 
 .people-page {
     margin-top: rem(40);
+    position: relative;
     &__container-big {
         background: #FFFAFE;
+        padding-bottom: rem(280);
     }
-    &__container {
-    }
+
 }
 .people-sl {
-    
     &__slider {
         position: relative;
     }
-
     &__wrapper {
         @include adaptiveValue("padding-top", 140, 80);
         @include adaptiveValue("padding-bottom",140 , 80);
     }
+}
 
-    &__slide {
-    }
-}
-.swiper {
-}
-.swiper-wrapper {
-}
 .swiper-slide {
-
     &__body {
         display: flex;
         flex-direction: row;
@@ -555,9 +546,6 @@ $tmpt-bg-clr:#FDF9F8;
         font-size: 18px;
         line-height: 180%;
         color: #1D2736;
-    }
-
-    &__icon {
     }
     &__nav {
         position: absolute;
@@ -677,3 +665,109 @@ $tmpt-bg-clr:#FDF9F8;
 }
 
 //========================================    SLIDER  END  ============================================================
+
+
+//========================================    BETA PAGE  ============================================================
+
+.beta-page {
+    &__container {
+    }
+    &__body {
+        padding-left: rem(48);
+        padding-right: rem(48);
+        @include adaptiveValue("padding-top", 120, 60);
+        @include adaptiveValue("padding-bottom", 120, 60);
+        position: absolute;
+        z-index: 4;
+        background: #FFFFFF;
+        box-shadow: 0px -10px 150px rgba(80, 88, 100, 0.05);
+        border-radius: 20px;
+        transform: translateY(-50%);
+        width: 1160px;
+        @media (max-width: em(1160)){
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+        @media (max-width:$mobile){
+            padding-left: rem(28);
+            padding-right: rem(28);
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 110%;
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: #1D2736;
+        text-align: center;
+        span {
+            color: #F0998D;
+        }
+    }
+    &__form {
+        margin-top: rem(75);
+    }
+}
+.form-beta {
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-flow: column;
+        gap: 32px;
+        @media (max-width:$mobile){
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center; 
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        @media (max-width:$mobile){
+            width: 100%;
+        }
+    }
+    &__input {
+        display: flex;
+        flex-direction: column;
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
+    }
+    &__button {
+        width: 100%;
+    }
+}
+.input {
+    background: #F7F9FD;
+    border: 1px solid #DFE8FA;
+    border-radius: 15px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    color: #677487;
+    margin-top: rem(16);
+    padding-left: rem(20);
+    @media (max-width:$mobile){
+        font-size: 14px;
+    }
+}
+.input-first {
+}
+.input-second {
+}
+.input-third {
+}
+.input-forth {
+}
+.button {
+    margin-top: 32px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+//========================================    BETA PAGE  end ============================================================
