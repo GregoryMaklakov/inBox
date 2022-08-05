@@ -233,6 +233,7 @@ $tmpt-bg-clr:#FDF9F8;
         @media (max-width:$mobile){
              flex-wrap: wrap;
              justify-content: center; 
+             gap: 40px;
         }
     }
     &__title {
@@ -739,7 +740,10 @@ $tmpt-bg-clr:#FDF9F8;
         }
     }
     &__button {
+        margin-top: 32px;
         width: 100%;
+        grid-column-start: 1;
+        grid-row-start: 2;
     }
 }
 .input {
@@ -753,6 +757,7 @@ $tmpt-bg-clr:#FDF9F8;
     color: #677487;
     margin-top: rem(16);
     padding-left: rem(20);
+    border-radius: 10px;
     @media (max-width:$mobile){
         font-size: 14px;
     }
@@ -765,9 +770,5 @@ $tmpt-bg-clr:#FDF9F8;
 }
 .input-forth {
 }
-.button {
-    margin-top: 32px;
-    grid-column-start: 1;
-    grid-row-start: 2;
-}
+
 //========================================    BETA PAGE  end ============================================================

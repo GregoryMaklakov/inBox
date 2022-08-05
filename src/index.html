@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	@@include('html/_head.htm',{
 	"title":"Agency in a box"
 	})
@@ -14,8 +14,8 @@
 								<h1 class="content-main__title">your agency. <span>in a box.</span></h1>
 								<div class="content-main__subtitle">All of your work in one place. And much more</div>
 								<div class="content-main__form">
-									<form action="#" class="form">
-										<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="error: wrong email" placeholder="Enter your email" class="form__input">
+									<form action="files/sendmail/sendmail.php" method="POST" class="form">
+										<input autocomplete="off" data-required data-validate type="email" name="form[]" data-error="Error" placeholder="your email" class="input input-forth">
 										<div class="form__wrp">
 											<button type="submit" class="form__button button">Sing Up</button>
 											<div class="form__beta">AND BE PART OF THE CLOSED BETA</div>
@@ -76,7 +76,7 @@
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Copy.ai</a></li>
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Hootsuite</a></li>
 												</ul>
-												<button type="submit" class="body-tab__btn button">Sign up</button>
+												<button data-popup="#popup" type="submit" class="body-tab__btn button">Sign up</button>
 											</div>
 											<div data-coefficient="50" data-prlx data-direction="-1" class="body-tab__image body-tab__image-first -ibg">
 												<img src="@img/tabs/tab_01.png" alt="tab_01">
@@ -95,7 +95,7 @@
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Malt</a></li>
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Fiverr</a></li>
 												</ul>
-												<button type="submit" class="body-tab__btn button">Sign up</button>
+												<button data-popup="#popup" type="submit" class="body-tab__btn button">Sign up</button>
 											</div>
 											<div data-coefficient="50" data-prlx data-direction="-1"  class="body-tab__image body-tab__image-second -ibg">
 												<img src="@img/tabs/tab_02.png" alt="tab_02">
@@ -114,7 +114,7 @@
 													<li class="body-tab__item"><a href="#" class="body-tab__link">MS Teams</a></li>
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Whatsapp</a></li>
 												</ul>
-												<button type="submit" class="body-tab__btn button">Sign up</button>
+												<button data-popup="#popup" type="submit" class="body-tab__btn button">Sign up</button>
 											</div>
 											<div data-coefficient="50" data-prlx data-direction="-1" class="body-tab__image body-tab__image-third -ibg">
 												<img src="@img/tabs/tab_03.png" alt="tab_03">
@@ -133,7 +133,7 @@
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Zapier</a></li>
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Airtable</a></li>
 												</ul>
-												<button type="submit" class="body-tab__btn button">Sign up</button>
+												<button data-popup="#popup" type="submit" class="body-tab__btn button">Sign up</button>
 											</div>
 											<div data-coefficient="50" data-prlx data-direction="-1"  class="body-tab__image body-tab__image-fourth -ibg">
 												<img src="@img/tabs/tab_04.png" alt="tab_04">
@@ -151,7 +151,7 @@
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Asana</a></li>
 													<li class="body-tab__item"><a href="#" class="body-tab__link">Monday</a></li>
 												</ul>
-												<button type="submit" class="body-tab__btn button">Sign up</button>
+												<button data-popup="#popup" type="submit" class="body-tab__btn button">Sign up</button>
 											</div>
 											<div data-coefficient="50" data-prlx data-direction="-1" class="body-tab__image body-tab__image-fourth -ibg">
 												<img src="@img/tabs/tab_05.png" alt="tab_05">
@@ -164,7 +164,7 @@
 					</div>
 				</section>
 
-				<section class="page__selling selling-block">
+				<section data-prlx-parent class="page__selling selling-block">
 					<div class="selling-block__container-big">
 						<div class="selling-block__container">
 							<div class="selling-block__boby selling-body">
@@ -173,14 +173,14 @@
 									<h4>There is more in life than prospection. Just focus on your craft and let us take care of the rest</h4>
 								</div>
 								<div class="selling-body__wrp">
-									<div class="selling-body__descr descr-selling descr-selling-first">
+									<div data-coefficient="50" data-prlx data-direction="-1" class="selling-body__descr descr-selling descr-selling-first">
 										<div class="descr-selling__img">
 											<img src="@img/arrow.svg" alt="">
 										</div>
 										<div class="descr-selling__title">dedicated landing page</div>
 										<div class="descr-selling__subtitle">When onboarding on snikpic, you will have your own dedicated and shareable landing page optimized for conversion.</div>
 									</div>
-									<div class="selling-body__descr descr-selling descr-selling-second">
+									<div data-coefficient="50" data-prlx data-direction="-1" class="selling-body__descr descr-selling descr-selling-second">
 										<div class="descr-selling__img">
 											<img src="@img/phone.svg" alt="">
 										</div>
@@ -217,7 +217,7 @@
 												<img src="@img/priceng/05.svg" alt="item">
 											</div>
 										</div>
-										<button type="submit" class="price-content__btn button">Sign up</button>
+										<button data-popup="#popup"  type="submit" class="price-content__btn button">Sign up</button>
 									</div>
 									<div class="price-block__price">
 										<div class="price-block__bg -ibg">
@@ -301,37 +301,14 @@
 					<div class="beta-page__body">
 						<div class="beta-page__title">apply to our <span>closed beta.</span></div>
 						<div class="beta-page__form form-beta">
-							<form id="forma" class="form-beta__body" action="files/sendmail/sendmail.php" method="POST">
-
-								<div class="form-beta__column form-beta__column-1">
-									<div class="form-beta__input">
-										<label for="input-first">Name</label>
-										<input type="text" name="form[name]" data-error="Error" data-required placeholder="Let’s not be strangers" class="input input-first">
-									</div>
-									<div class="form-beta__input">
-										<label for="input-second">Website</label>
-										<input autocomplete="off" type="tel" name="form[]" data-error="Error" placeholder="Put 	the URL right there" class="input input-second">
-									</div>
-								</div>
-								
-								<div class="form-beta__column form-beta__column-2">
-									<div class="form-beta__input">
-										<label for="input-third">Phone Number</label>
-										<input type="text" name="form[email]" data-error="Error" placeholder="470000000" class="input input-third">
-									</div>
-									<div class="form-beta__input">
-										<label for="input-forth">Email Address</label>
-										<input autocomplete="off" data-required data-validate type="email" name="form[]" data-error="Error" placeholder="That’s right, we need your email" class="input input-forth">
-									</div>
-								</div>		
-								<button type="submit" class="form-beta__button button">Send</button>							
+							<form action="files/sendmail/sendmail.php" method="POST">
+								<input type="text" name="form[email]" data-error="Error" placeholder="E-mail" class="input">
+								<button type="submit" class="button">Send</button>
 							</form>
 						</div>
 					</div>
 				</div>
-			</section>
-			
-				
+			</section>			
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

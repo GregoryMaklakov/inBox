@@ -31,6 +31,10 @@ body::after {
 	overflow: auto;
 	pointer-events: auto;
 }
+.popup__close {
+	margin-bottom: rem(20);
+	
+}
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
