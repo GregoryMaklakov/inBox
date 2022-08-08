@@ -1,18 +1,7 @@
 
-.page {
-    &__main {
-    }
-    &__tabs {
-    }
-    &__selling {
-    }
-    &__price {
-    }
-}
 //===================================      MAIN BLOCK     =============================================
 
 .main-block {
-
     &__body {
         display: flex;
         flex-direction: row;
@@ -284,6 +273,9 @@ $tmpt-bg-clr:#FDF9F8;
     &__image {
         width: 586px;
         height: 475px;
+        @media (max-width:$mobile){
+             margin-top: rem(100); 
+        }
         &-second {
             width: 400px;
         }
@@ -411,7 +403,7 @@ $tmpt-bg-clr:#FDF9F8;
         position: relative;
         z-index: 5;
         @media (max-width: em(880)){
-              margin-top: rem(60);
+              margin-top: rem(120);
         }
     }
     &__text {
@@ -469,6 +461,9 @@ $tmpt-bg-clr:#FDF9F8;
         }
     }
     &__item {
+        @media (max-width:$mobile){
+             margin-top: rem(60); 
+        }
     }
 
     &__btn {
@@ -533,6 +528,11 @@ $tmpt-bg-clr:#FDF9F8;
             justify-content: center;
             align-items: center;
        }
+    }
+    &__icon {
+        @media (max-width:$mobile){
+             display: none; 
+        }
     }
 
     &__title {
@@ -709,19 +709,18 @@ $tmpt-bg-clr:#FDF9F8;
     }
     &__form {
         margin-top: rem(75);
+        display: flex;
+        flex-direction: column ;
+        @include adaptiveValue("padding-right", 100, 20);
+        @include adaptiveValue("padding-left", 100, 20);
     }
 }
 .form-beta {
     &__body {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-auto-flow: column;
         gap: 32px;
         @media (max-width:$mobile){
              display: flex;
              flex-direction: column;
-             justify-content: center;
-             align-items: center; 
         }
     }
     &__column {
@@ -741,9 +740,6 @@ $tmpt-bg-clr:#FDF9F8;
     }
     &__button {
         margin-top: 32px;
-        width: 100%;
-        grid-column-start: 1;
-        grid-row-start: 2;
     }
 }
 .input {
@@ -751,6 +747,7 @@ $tmpt-bg-clr:#FDF9F8;
     border: 1px solid #DFE8FA;
     border-radius: 15px;
     height: 60px;
+    width: 100%;
     font-weight: 400;
     font-size: 18px;
     line-height: 180%;
@@ -758,17 +755,9 @@ $tmpt-bg-clr:#FDF9F8;
     margin-top: rem(16);
     padding-left: rem(20);
     border-radius: 10px;
+
     @media (max-width:$mobile){
         font-size: 14px;
     }
 }
-.input-first {
-}
-.input-second {
-}
-.input-third {
-}
-.input-forth {
-}
-
 //========================================    BETA PAGE  end ============================================================

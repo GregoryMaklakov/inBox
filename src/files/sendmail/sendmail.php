@@ -15,16 +15,16 @@
 	$mail->isSMTP();                                            //Send using SMTP
 	$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'maklakov.grigory@gmail.com';                     //SMTP username
+	$mail->Username   = '';                     //SMTP username
 	$mail->Password   = 'eijwulhqhelhnjsc';                               //SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
 	$mail->Port       = 465;                 
 	
 
 	//От кого письмо
-	$mail->setFrom('maklakov.grigory@gmail.com', 'In a Box'); // Указать нужный E-mail
+	$mail->setFrom('', 'In a Box'); // Указать нужный E-mail
 	//Кому отправить
-	$mail->addAddress('web2022@maklakovgrigory.com'); // Указать нужный E-mail
+	$mail->addAddress(''); // Указать нужный E-mail
 	//Тема письма
 	$mail->Subject = 'Привет! Это In a Box';
 

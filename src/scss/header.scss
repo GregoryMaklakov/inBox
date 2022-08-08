@@ -30,28 +30,16 @@
 			padding-right: 10px;
 	  }
 	}
-
-	&__logo {
-	}
-
-	&__menu {
-		
-	}
-
-	&__actions {
-	}
 }
 .menu {
 	display: flex;
 	align-items: center;
 	@media (max-width:$mobile){
-		 
 	}
 	&__body {
 		@media (max-width:$mobile){
 			position: fixed;
 			width: 100%;
-			height: 100%;
 			top: 0;
 			left: -100%; //скрываем меню
 			transition: all .5s ease 0s;
@@ -130,8 +118,6 @@
 	}
 
 }
-
-
 //====================================================================================================
 
 //Burger
